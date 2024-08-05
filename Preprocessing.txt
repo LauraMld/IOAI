@@ -30,3 +30,70 @@
 7. Ensemble Methods
 
     Ensemble Models: Train multiple models with different initialization seeds or architectures and combine their predictions to enhance robustness and performance.
+
+
+
+
+Sentiment
+
+
+1. Text Normalization
+
+    Lowercasing: Convert all text to lowercase to ensure uniformity.
+    Removing Accents and Diacritics: If applicable, remove accents and diacritics from characters to standardize text.
+    Handling Special Characters and Punctuation: Remove or replace special characters and punctuation that do not contribute to sentiment.
+
+2. Tokenization
+
+    Word Tokenization: Split text into individual words using a suitable tokenizer. For an unknown language, you might need to develop a custom tokenizer.
+    Subword Tokenization: Use subword tokenization methods like Byte Pair Encoding (BPE) or SentencePiece to handle out-of-vocabulary words effectively.
+
+3. Stop Words Removal
+
+    Stop Words Identification: Identify and remove common stop words in Language X if they do not contribute to sentiment.
+    Custom Stop Words List: Create a custom list of stop words specific to Language X.
+
+4. Lemmatization and Stemming
+
+    Lemmatization: Reduce words to their base or root form. For example, "running" to "run."
+    Stemming: Use stemming algorithms to strip suffixes from words. Choose between lemmatization and stemming based on the linguistic properties of Language X.
+
+5. Handling Negations
+
+    Negation Detection: Identify and appropriately handle negations in sentences, as they can significantly affect sentiment.
+    Negation Tagging: Tag words following a negation word to capture the change in sentiment.
+
+6. Handling Emoticons and Emojis
+
+    Emoji Conversion: Convert emojis and emoticons into text equivalents as they often carry strong sentiment.
+    Emoji Removal: Alternatively, remove emojis if they cannot be effectively converted.
+
+7. Handling Repeated Characters
+
+    Character Normalization: Normalize elongated words with repeated characters to their base form (e.g., "goooood" to "good").
+
+8. Handling Slang and Abbreviations
+
+    Slang Dictionary: Create a dictionary of common slang terms and abbreviations used in Language X and expand them to their full forms.
+
+9. Data Augmentation
+
+    Synonym Replacement: Replace words with their synonyms to create variations in the text.
+    Back-Translation: Translate text to another language and back to Language X to create paraphrased versions.
+
+10. Feature Engineering
+
+    N-grams: Extract n-grams (bigrams, trigrams) to capture context that may affect sentiment.
+    POS Tagging: Perform Part-of-Speech tagging to understand the grammatical structure and its effect on sentiment.
+    TF-IDF: Calculate Term Frequency-Inverse Document Frequency (TF-IDF) to weigh the importance of words.
+
+11. Vectorization
+
+    Word Embeddings: Use pre-trained embeddings if available or train your own embeddings using Word2Vec, GloVe, or FastText.
+    Subword Embeddings: Use subword embeddings to handle rare and out-of-vocabulary words effectively.
+
+12. Handling Class Imbalance
+
+    Oversampling: Duplicate examples from the minority class to balance the dataset.
+    Undersampling: Remove examples from the majority class.
+    Synthetic Data Generation: Use techniques like SMOTE (Synthetic Minority Over-sampling Technique) to generate synthetic examples for the minority class.
